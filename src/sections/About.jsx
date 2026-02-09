@@ -7,6 +7,7 @@ import { useLanguage } from "../context/LanguageContext";
 import { portfolio } from "../data/portfolio";
 import { t } from "../utils/t";
 import { motion } from "framer-motion";
+import { assetUrl } from "../utils/assetUrl";
 
 export default function About() {
   const { lang } = useLanguage();
@@ -41,7 +42,7 @@ export default function About() {
 
                   {a?.portraitSrc ? (
                     <img
-                      src={a.portraitSrc}
+                      src={assetUrl(a.portraitSrc)}
                       alt={t(a?.portraitAlt, lang)}
                       className="w-full aspect-[3/4] object-cover"
                       loading="lazy"

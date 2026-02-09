@@ -6,13 +6,14 @@ import { motion } from "framer-motion";
 import { useLanguage } from "../context/LanguageContext";
 import { portfolio } from "../data/portfolio";
 import { t } from "../utils/t";
+import { assetUrl } from "../utils/assetUrl";
 
 export default function Hero() {
   const { lang } = useLanguage();
   const h = portfolio.hero;
 
   const images = (h.media?.gallery || []).map((img) => ({
-    src: img.src,
+    src: assetUrl(img.src),
     alt: t(img.alt, lang),
   }));
 

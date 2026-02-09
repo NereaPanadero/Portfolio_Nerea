@@ -1,5 +1,6 @@
 import { useMemo, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { assetUrl } from "../../utils/assetUrl";
 
 export default function MediaCarousel({ images = [], aspect = "video", className = "" }) {
   const items = useMemo(() => (Array.isArray(images) ? images.filter(Boolean) : []), [images]);
@@ -12,8 +13,8 @@ export default function MediaCarousel({ images = [], aspect = "video", className
     aspect === "square"
       ? "aspect-square"
       : aspect === "portrait"
-      ? "aspect-[4/5]"
-      : "aspect-video";
+        ? "aspect-[4/5]"
+        : "aspect-video";
 
   function prev() {
     if (!hasImages) return;
@@ -59,7 +60,7 @@ export default function MediaCarousel({ images = [], aspect = "video", className
       <AnimatePresence mode="wait">
         <motion.img
           key={current.src}
-          src={current.src}
+          src={assetUrl(current.src)}
           alt={current.alt || ""}
           className="h-full w-full object-cover"
           initial={{ opacity: 0, scale: 1.01 }}
