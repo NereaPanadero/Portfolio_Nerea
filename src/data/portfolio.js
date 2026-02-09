@@ -223,11 +223,7 @@ export const portfolio = {
 
     media: {
       gallery: [
-        { src: "/images/logos/logo blanco.png", alt: { en: "AIntegra logo", es: "Logo AIntegra" } },
-        { src: "/images/profile/once.jpeg", alt: { en: "O.N.C.E collaboration", es: "Colaboración con O.N.C.E" } },
-        { src: "/images/projects/aintegra-assist/1767012137299.jpg", alt: { en: "Founders", es: "Founders" } },
-        { src: "/images/projects/aintegra-assist/vds1.jpeg", alt: { en: "Founders in the VDS+ 2025", es: "Founders en VDS+ 2025" } },
-        { src: "/images/projects/aintegra-assist/vds2.jpeg", alt: { en: "Founders in the VDS+ 2025", es: "Founders en VDS+ 2025" } },
+        { src: "/images/profile/AI.png", alt: { en: "AIntegra logo", es: "Logo AIntegra" } },
       ],
     },
   },
@@ -427,6 +423,7 @@ export const portfolio = {
       { src: "/images/profile/vds.png", alt: { en: "VDS Presentation", es: "VDS Presentacion" } },
       { src: "/images/profile/award3.jpg", alt: { en: "Premio preincubadora ETSE", es: "Premio preincubadora ETSE" } },
       { src: "/images/profile/award4.jpg", alt: { en: "Premio Dedalus 2025", es: "Premio Dedalus 2025" } },
+      { src: "/images/profile/once.jpeg", alt: { en: "In the O.N.C.E", es: "En la O.N.C.E" } },
     ]
   },
 
