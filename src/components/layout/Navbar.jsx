@@ -3,6 +3,7 @@ import Container from "./Container";
 import { useLanguage } from "../../context/LanguageContext";
 import { portfolio } from "../../data/portfolio";
 import { t } from "../../utils/t";
+import { assetUrl } from "../../utils/assetUrl";
 
 const links = [
   { id: "home", key: "home" },
@@ -70,7 +71,7 @@ export default function Navbar() {
           aria-label="Go to Home"
         >
           <img
-            src="/images/logos/nep.png"
+            src={assetUrl("/images/logos/nep.png")}
             alt="Nerea Panadero logo"
             className="navbar__logo"
           />

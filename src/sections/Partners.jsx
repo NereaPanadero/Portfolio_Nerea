@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { useLanguage } from "../context/LanguageContext";
 import { portfolio } from "../data/portfolio";
 import { t } from "../utils/t";
+import { assetUrl } from "../utils/assetUrl";
 
 export default function Partners() {
     const { lang } = useLanguage();
@@ -39,7 +40,7 @@ export default function Partners() {
                                     >
                                         {logo.src ? (
                                             <img
-                                                src={logo.src}
+                                                src={assetUrl(logo.src)}
                                                 alt={t(logo.alt, lang)}
                                                 className="max-w-[85%] max-h-[85%] object-contain transition-all grayscale group-hover:grayscale-0"
                                                 loading="lazy"
