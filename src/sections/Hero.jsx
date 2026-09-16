@@ -1,160 +1,109 @@
+import { ArrowRight, Download, Sparkles } from "lucide-react";
 import Container from "../components/layout/Container";
-import Section from "../components/layout/Section";
-import Reveal from "../components/layout/Reveal";
-import MediaCarousel from "../components/ui/MediaCarousel";
-import { motion } from "framer-motion";
+import Img from "../components/ui/Img";
+import NPLogo from "../components/brand/NPLogo";
+import Braille from "../components/brand/Braille";
+import Scribble from "../components/brand/Scribble";
 import { useLanguage } from "../context/LanguageContext";
 import { portfolio } from "../data/portfolio";
 import { t } from "../utils/t";
 import { assetUrl } from "../utils/assetUrl";
+import { openChat } from "../utils/events";
 
 export default function Hero() {
   const { lang } = useLanguage();
   const h = portfolio.hero;
-
-  const images = (h.media?.gallery || []).map((img) => ({
-    src: assetUrl(img.src),
-    alt: t(img.alt, lang),
-  }));
-
-  const cvUrl = h.cvUrl?.[lang] || h.cvUrl?.en || null;
+  const ui = portfolio.ui;
 
   return (
-    <Section id="home" className="pt-20 pb-16 relative overflow-hidden">
-      {/* Blobs gradient background */}
-      <div className="pointer-events-none absolute inset-0 opacity-60 mix-blend-multiply">
-        <div className="absolute -top-24 -left-24 h-72 w-72 rounded-full bg-lilac/18 blur-3xl" />
-        <div className="absolute top-24 -right-24 h-72 w-72 rounded-full bg-mint/14 blur-3xl" />
-        <div className="absolute bottom-[-120px] left-1/3 h-80 w-80 rounded-full bg-peach/12 blur-3xl" />
+    <section id="top" aria-labelledby="hero-title" className="relative overflow-hidden pb-20 pt-28 sm:pt-32 lg:pb-28 lg:pt-36">
+      {/* Brand watermark: NP monogram */}
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10">
+        <div className="dots-bg absolute inset-0 [mask-image:radial-gradient(70%_60%_at_30%_40%,#000,transparent)]" />
+        <NPLogo soft className="np-watermark absolute -right-[18rem] -top-24 h-[46rem] w-[46rem] opacity-70 sm:-right-40 lg:-right-24 lg:top-6" />
       </div>
 
       <Container>
-        <div className="relative grid gap-12 lg:grid-cols-2 items-center">
-          {/* Left Column - Text Content */}
-          <div className="space-y-6">
-            <Reveal>
-              <span className="inline-flex items-center gap-2 rounded-full border border-ink/10 bg-paper/70 px-4 py-2 text-xs text-ink/70 shadow-soft">
-                <span className="inline-block h-2 w-2 rounded-full bg-lilac/70 animate-pulse" />
-                {t(h.badge, lang)}
-              </span>
-            </Reveal>
-
-            <Reveal delay={0.05}>
-              <h1 className="text-4xl md:text-5xl xl:text-6xl font-bold tracking-tight text-ink leading-[1.05]">
-                <span className="relative inline-block">
-                  <span className="relative z-10">{h.name}</span>
-                  <span className="absolute -bottom-2 left-0 right-0 h-4 rounded-full bg-mint/35 blur-[1px]" />
+        <div className="grid items-center gap-14 lg:grid-cols-[1.12fr_0.88fr]">
+          <div>
+            <div className="hero-rise">
+              <p className="sticker !bg-mint !text-[0.8rem] sm:!text-sm">
+                <span className="relative flex h-2.5 w-2.5" aria-hidden="true">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-go opacity-60" />
+                  <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-go" />
                 </span>
-              </h1>
-            </Reveal>
-
-            <Reveal delay={0.1}>
-              <p className="text-lg md:text-xl text-ink/85 max-w-xl leading-relaxed">
-                {t(h.headline, lang)}
+                {t(h.openToWork, lang)}
               </p>
-            </Reveal>
+            </div>
 
-            <Reveal delay={0.15}>
-              <p className="max-w-xl text-base text-ink/70 leading-relaxed">{t(h.subtext, lang)}</p>
-            </Reveal>
+            <div style={{ "--d": "0.05s" }} className="hero-rise">
+              <p className="mt-7 flex items-center gap-3 text-2xl text-ink/80 sm:text-3xl">
+                <span className="serif">{t(h.hello, lang)}</span>
+              </p>
+              <h1 id="hero-title" className="mt-2 text-[2.9rem] font-extrabold leading-[0.98] tracking-[-0.045em] text-ink sm:text-6xl lg:text-[4.6rem]">
+                {t(h.titleStart, lang)}{" "}
+                <Scribble>
+                  <span className="serif font-normal text-accent">{t(h.titleHighlight, lang)}</span>
+                </Scribble>
+              </h1>
+            </div>
 
-            <Reveal delay={0.2}>
-              <div className="flex flex-wrap gap-3 pt-2">
-                <motion.button
-                  whileHover={{ y: -2, scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  onClick={() =>
-                    document
-                      .getElementById("projects")
-                      ?.scrollIntoView({ behavior: "smooth" })
-                  }
-                  className="rounded-full bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-3 text-sm font-semibold text-white shadow-lg hover:shadow-xl transition-all"
-                >
-                  {t(h.ctaProjects, lang)}
-                </motion.button>
+            <p style={{ "--d": "0.1s" }} className="hero-rise lead mt-7 !text-[1.15rem]">
+              {t(h.sub, lang)}
+            </p>
 
-                <motion.button
-                  whileHover={{ y: -2, scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  onClick={() =>
-                    document
-                      .getElementById("contact")
-                      ?.scrollIntoView({ behavior: "smooth" })
-                  }
-                  className="rounded-full border border-ink/15 bg-white/80 backdrop-blur-sm px-6 py-3 text-sm font-semibold text-ink shadow-soft hover:shadow-md transition-all"
-                >
-                  {t(h.ctaContact, lang)}
-                </motion.button>
+            <div style={{ "--d": "0.15s" }} className="hero-rise mt-8 flex flex-wrap items-center gap-3">
+              <a href="#contact" className="btn btn-primary">
+                {t(ui.letsTalk, lang)} <ArrowRight className="h-4 w-4" aria-hidden="true" />
+              </a>
+              <a href={assetUrl(portfolio.person.cvUrl[lang])} target="_blank" rel="noopener noreferrer" className="btn btn-ghost">
+                <Download className="h-4 w-4" aria-hidden="true" /> {t(ui.downloadCV, lang)}
+              </a>
+              <button type="button" onClick={() => openChat()} className="btn btn-sun">
+                <Sparkles className="h-4 w-4" aria-hidden="true" /> {t(ui.askAI, lang)}
+              </button>
+            </div>
 
-                {cvUrl && (
-                  <motion.a
-                    whileHover={{ y: -2, scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    href={cvUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="rounded-full border border-ink/15 bg-white/80 backdrop-blur-sm px-6 py-3 text-sm font-semibold text-ink shadow-soft hover:shadow-md transition-all"
-                  >
-                    {t(h.ctaCV, lang)}
-                  </motion.a>
-                )}
-              </div>
-            </Reveal>
-
-            <Reveal delay={0.25}>
-              <div className="grid gap-3 sm:grid-cols-3 max-w-xl pt-4">
-                {h.sideCards.map((c, i) => (
-                  <motion.div
-                    key={i}
-                    whileHover={{ y: -2 }}
-                    className="rounded-xl border border-ink/10 bg-white/80 backdrop-blur-sm p-4 shadow-soft hover:shadow-md transition-all"
-                  >
-                    <p className="text-xs text-ink/60 font-medium">{t(c.label, lang)}</p>
-                    <p className="mt-1 text-sm font-bold text-ink">
-                      {t(c.value, lang)}
-                    </p>
-                  </motion.div>
+            <div style={{ "--d": "0.2s" }} className="hero-rise mt-10">
+              <p className="text-xs font-extrabold uppercase tracking-[0.18em] text-ink/60">{t(h.proofLabel, lang)}</p>
+              <ul className="mt-3 flex flex-wrap gap-x-6 gap-y-2 text-lg font-extrabold tracking-tight text-ink/80">
+                {h.proof.map((name) => (
+                  <li key={name}>{name}</li>
                 ))}
-              </div>
-            </Reveal>
+              </ul>
+            </div>
           </div>
 
-          {/* Right Column - Prominent Image */}
-          <Reveal delay={0.3}>
-            <div className="flex justify-center lg:justify-end">
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                whileHover={{ scale: 1.02 }}
-                transition={{ duration: 0.5 }}
-                className="w-full max-w-2xl"
-              >
-                {/* Full-width image without card wrapper */}
-                <div className="relative rounded-3xl overflow-hidden shadow-2xl border-2 border-purple-200">
-                  {/* Subtle overlay for depth */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-purple-900/20 via-transparent to-transparent z-10 pointer-events-none" />
-
-                  {/* Use second image from gallery (natural.jpeg) */}
-                  {images[1] ? (
-                    <motion.img
-                      whileHover={{ scale: 1.05 }}
-                      transition={{ duration: 0.5 }}
-                      src={images[1].src}
-                      alt={images[1].alt}
-                      className="w-full aspect-[4/5] object-cover"
-                      loading="eager"
-                    />
-                  ) : (
-                    <div className="w-full aspect-[4/5] grid place-items-center bg-gradient-to-br from-purple-50 to-pink-50">
-                      <p className="text-sm text-ink/60">Add image to gallery</p>
-                    </div>
-                  )}
-                </div>
-              </motion.div>
+          {/* Photo collage */}
+          <div style={{ "--d": "0.1s" }} className="hero-rise relative mx-auto w-full max-w-[26rem]">
+            <div aria-hidden="true" className="absolute -left-5 top-8 h-[88%] w-full rounded-t-full rounded-b-4xl border-2 border-ink bg-lilac" />
+            <div className="relative overflow-hidden rounded-t-full rounded-b-4xl border-2 border-ink bg-blush" style={{ boxShadow: "8px 8px 0 rgb(var(--shadow))" }}>
+              <Img
+                src={h.photo.src}
+                alt={t(h.photo.alt, lang)}
+                width={h.photo.width}
+                height={h.photo.height}
+                eager
+                className="aspect-[4/5] w-full object-cover"
+              />
             </div>
-          </Reveal>
+
+            <p className="sticker absolute -left-4 top-[12%] animate-floaty !bg-butter sm:-left-12" style={{ "--r": "-7deg" }}>
+              <span aria-hidden="true">🏆</span> {t(h.stickers.award, lang)}
+            </p>
+            <p className="sticker absolute -right-2 top-[46%] animate-floaty !bg-sky [animation-delay:1.2s] sm:-right-10" style={{ "--r": "5deg" }}>
+              <span aria-hidden="true">🎤</span> {t(h.stickers.role, lang)}
+            </p>
+            <div className="sticker absolute -bottom-5 left-4 !gap-3 !bg-surface !py-2 sm:left-8" style={{ transform: "rotate(-3deg)" }}>
+              <Braille label={t(ui.brailleTitle, lang)} className="h-5 w-auto text-ink" dot={4.5} />
+              <span className="text-xs font-bold text-ink/70">← {lang === "en" ? "my name in Braille" : "mi nombre en braille"}</span>
+            </div>
+            <p className="sticker absolute -right-3 bottom-[14%] !bg-mint text-xs sm:-right-6" style={{ transform: "rotate(-4deg)" }}>
+              <span aria-hidden="true">📍</span> {t(h.stickers.now, lang)}
+            </p>
+          </div>
         </div>
       </Container>
-    </Section>
+    </section>
   );
 }

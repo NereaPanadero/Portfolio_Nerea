@@ -1,16 +1,30 @@
-# React + Vite
+# Nerea Panadero · Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio of **Nerea Panadero Alfonso** — Telematics Engineer, co-founder of AIntegra and XR Accessibility Specialist.
 
-Currently, two official plugins are available:
+🔗 **Live:** https://nereapanadero.github.io/Portfolio_Nerea/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Highlights
 
-## React Compiler
+- **Accessibility panel** (`Alt + A`): text size, high contrast, dark mode, dyslexia-friendly font (Atkinson Hyperlegible), text spacing, reading guide, read aloud, big cursor, pause animations, hide images, and quick profiles (low vision, dyslexia, focus/ADHD, seizure-safe). Settings persist per device.
+- **On-device AI assistant**: answers questions about Nerea in English and Spanish, tolerant to typos, with follow-ups and action buttons. Runs fully in the browser — no external API, no tracking.
+- **Accessible by default**: semantic landmarks, skip link, visible focus, native `<dialog>`, respects `prefers-reduced-motion` and `prefers-color-scheme`. Audited with axe-core (WCAG 2.2 AA rules).
+- **Lightweight**: no animation library, lazy-loaded panel/chat, WebP images, inline SVG logo. ~88 KB gzipped JS on first load.
+- **Secure static site**: Content-Security-Policy, strict referrer policy, `noopener` links, spam-protected contact form (honeypot + rate limit).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Stack
 
-## Expanding the ESLint configuration
+React 19 · Vite 7 · Tailwind CSS 3 · lucide-react
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Development
+
+```bash
+npm install
+npm run dev      # http://localhost:5173/Portfolio_Nerea/
+npm run build    # production build in dist/
+npm run lint
+```
+
+All content (EN/ES) lives in `src/data/portfolio.js`. Optimised images are in `public/img/`; original high-resolution sources are kept in `design-source/` (not deployed).
+
+Deployed to GitHub Pages on every push to `main` (`.github/workflows/deploy.yml`).
