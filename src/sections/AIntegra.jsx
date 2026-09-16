@@ -1,179 +1,97 @@
+import { ArrowUpRight } from "lucide-react";
 import Container from "../components/layout/Container";
-import Section from "../components/layout/Section";
-import Reveal from "../components/layout/Reveal";
-import PastelCard from "../components/ui/PastelCard";
-import MediaCarousel from "../components/ui/MediaCarousel";
-import SectionHeader from "../components/ui/SectionHeader";
+import Heading from "../components/ui/Heading";
+import Reveal from "../components/ui/Reveal";
+import Img from "../components/ui/Img";
 import { useLanguage } from "../context/LanguageContext";
 import { portfolio } from "../data/portfolio";
 import { t } from "../utils/t";
-import { motion } from "framer-motion";
+
+const PRODUCT_BG = { mint: "bg-mint", butter: "bg-butter", lilac: "bg-lilac", blush: "bg-blush" };
 
 export default function AIntegra() {
   const { lang } = useLanguage();
-  const a = portfolio?.aintegra ?? {};
-
-  const images = (a?.media?.gallery ?? []).map((img) => ({
-    src: img.src,
-    alt: t(img.alt, lang),
-  }));
-
-  const chips = a?.chips ?? [];
-  const whatIDo = a?.whatIDo ?? [];
-  const impactGoals = a?.impactGoals ?? [];
-  const upcoming = a?.upcoming ?? [];
+  const a = portfolio.aintegra;
+  const [demo, once, logo] = a.photos;
 
   return (
-    <Section id="aintegra">
-      <Container>
-        <SectionHeader
-          eyebrow={lang === "en" ? "Main venture" : "Proyecto principal"}
-          title={t(a?.title, lang)}
-          lead={t(a?.focus, lang)}
-          right={
-            a?.websiteUrl ? (
-              <motion.a
-                whileHover={{ y: -2 }}
-                whileTap={{ scale: 0.98 }}
-                href={a.websiteUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center justify-center rounded-2xl bg-ink px-5 py-2.5 text-sm font-semibold text-paper shadow-soft"
-              >
-                {t(a?.websiteLabel, lang)}
-              </motion.a>
-            ) : null
-          }
-        />
+    <section id="aintegra" aria-labelledby="aintegra-title" className="px-3 py-10 sm:px-5">
+      <div className="relative mx-auto max-w-[88rem] keep-colors overflow-hidden rounded-5xl border-2 border-ink bg-ink py-20 text-paper sm:py-24">
+        <div aria-hidden="true" className="absolute inset-0 opacity-[0.07] [background-image:radial-gradient(currentColor_1.5px,transparent_1.7px)] [background-size:22px_22px]" />
+        <Container className="relative">
+          <div className="grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
+            <div>
+              <Heading
+                id="aintegra-title"
+                invert
+                eyebrow={t(a.eyebrow, lang)}
+                start={t(a.titleStart, lang)}
+                highlight={t(a.titleHighlight, lang)}
+                lead={t(a.lead, lang)}
+              />
 
+              <Reveal delay={0.05} className="mt-10">
+                <h3 className="text-lg font-extrabold text-paper">{t(a.problem.label, lang)}</h3>
+                <p className="mt-1 leading-relaxed text-paper/80">{t(a.problem.body, lang)}</p>
+              </Reveal>
 
-        {/* Prominent Carousel at Top */}
-        <div className="mt-10">
-          <Reveal delay={0.06}>
-            <motion.div
-              whileHover={{ y: -4, scale: 1.005 }}
-              className="rounded-3xl border-2 border-purple-200 bg-gradient-to-br from-white via-white to-purple-50/30 p-6 shadow-2xl hover:shadow-purple-200/50 transition-all duration-300 overflow-hidden"
-            >
-              <div className="relative rounded-2xl overflow-hidden border-2 border-purple-200 shadow-lg">
-                {/* Gradient overlay for depth and text contrast */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent z-10 pointer-events-none" />
+              <ul className="mt-6 grid gap-4 sm:grid-cols-2">
+                {a.products.map((prod, i) => (
+                  <Reveal as="li" key={prod.name} delay={0.08 + i * 0.05} className={`rounded-4xl border-2 border-paper p-5 text-ink ${PRODUCT_BG[prod.color]}`}>
+                    <p className="text-xs font-extrabold uppercase tracking-[0.14em] text-ink/75">{t(prod.tag, lang)}</p>
+                    <h3 className="mt-1 text-3xl font-extrabold tracking-tight">{prod.name}</h3>
+                    {prod.fullName ? <p className="serif text-lg leading-tight text-ink/80">{prod.fullName}</p> : null}
+                    <p className="mt-2 text-[0.95rem] leading-relaxed text-ink/85">{t(prod.body, lang)}</p>
+                    {prod.pillars ? (
+                      <ul className="mt-3 flex flex-wrap gap-1.5" aria-label={lang === "en" ? "Pillars" : "Pilares"}>
+                        {prod.pillars.map((pl) => (
+                          <li key={pl.en} className="rounded-full border-2 border-ink bg-surface px-2.5 py-0.5 text-xs font-extrabold">
+                            {t(pl, lang)}
+                          </li>
+                        ))}
+                      </ul>
+                    ) : null}
+                  </Reveal>
+                ))}
+              </ul>
 
-                <MediaCarousel
-                  images={images}
-                  aspect="video"
-                  className="[&_img]:object-cover [&_img]:aspect-video"
-                />
+              <Reveal delay={0.12} className="mt-6">
+                <h3 className="text-lg font-extrabold text-paper">{t(a.role.label, lang)}</h3>
+                <p className="mt-1 leading-relaxed text-paper/80">{t(a.role.body, lang)}</p>
+              </Reveal>
 
-                {!!chips.length && (
-                  <div className="absolute inset-x-0 bottom-0 p-4 z-20">
-                    <div className="relative flex flex-wrap gap-2">
-                      {chips.map((chip, i) => {
-                        const variants = [
-                          "chip--lilac",
-                          "chip--sky",
-                          "chip--mint",
-                          "chip--butter",
-                        ];
-                        return (
-                          <span
-                            key={i}
-                            className={`chip ${variants[i % variants.length]} shadow-lg`}
-                          >
-                            {t(chip, lang)}
-                          </span>
-                        );
-                      })}
-                    </div>
-                  </div>
-                )}
+              <Reveal delay={0.15}>
+                <ul className="mt-9 flex flex-wrap gap-2">
+                  {a.recognition.map((r, i) => (
+                    <li key={i} className="rounded-full border-2 border-paper/30 px-3.5 py-1.5 text-sm font-bold text-paper">
+                      {t(r, lang)}
+                    </li>
+                  ))}
+                </ul>
+                <a href={a.websiteUrl} target="_blank" rel="noopener noreferrer" className="btn btn-sun mt-8 !border-paper">
+                  {t(a.websiteLabel, lang)} <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+                </a>
+              </Reveal>
+            </div>
+
+            {/* Collage */}
+            <Reveal delay={0.1} className="relative mx-auto grid w-full max-w-lg grid-cols-5 grid-rows-[auto_auto] gap-4">
+              <div className="col-span-3 row-span-2 overflow-hidden rounded-4xl border-2 border-paper" style={{ transform: "rotate(-2deg)" }}>
+                <Img src={demo.src} alt={t(demo.alt, lang)} width={demo.width} height={demo.height} className="h-full w-full object-cover" />
               </div>
-            </motion.div>
-          </Reveal>
-        </div>
-
-        {/* Content cards below - Well-aligned grid */}
-        <div className="mt-12 grid gap-4">
-          <Reveal delay={0.15}>
-            <PastelCard accent="mint">
-              <p className="text-xs uppercase tracking-[0.16em] text-ink/55 font-semibold">
-                {t(a?.role, lang)}
+              <div className="col-span-2 grid aspect-square place-items-center rounded-4xl border-2 border-paper bg-[#fff] p-4" style={{ transform: "rotate(3deg)" }}>
+                <Img src={logo.src} alt={t(logo.alt, lang)} width={logo.width} height={logo.height} className="h-full w-full object-contain" />
+              </div>
+              <div className="col-span-2 overflow-hidden rounded-4xl border-2 border-paper" style={{ transform: "rotate(2deg)" }}>
+                <Img src={once.src} alt={t(once.alt, lang)} width={once.width} height={once.height} className="aspect-[3/4] h-full w-full object-cover" />
+              </div>
+              <p className="sticker absolute -bottom-4 left-1/2 -translate-x-1/2 !bg-butter" style={{ transform: "translateX(-50%) rotate(-3deg)" }}>
+                CAT <span className="serif !font-normal">+</span> CATY <span aria-hidden="true">🐾</span>
               </p>
-              <p className="mt-2 text-sm text-ink/80 leading-relaxed">
-                {t(a?.focus, lang)}
-              </p>
-            </PastelCard>
-          </Reveal>
-
-          <Reveal delay={0.2}>
-            <PastelCard accent="sky">
-              <p className="font-medium text-ink">{t(a?.missionTitle, lang)}</p>
-              <p className="mt-2 text-sm text-ink/80 leading-relaxed">
-                {t(a?.mission, lang)}
-              </p>
-            </PastelCard>
-          </Reveal>
-
-          {/* Context + Accelerator in 2-column grid */}
-          <div className="grid gap-4 md:grid-cols-2 items-start">
-            <Reveal delay={0.25}>
-              <PastelCard accent="lilac">
-                <p className="font-medium text-ink">{t(a?.storyTitle, lang)}</p>
-                <p className="mt-2 text-sm text-ink/80 leading-relaxed">
-                  {t(a?.story, lang)}
-                </p>
-              </PastelCard>
-            </Reveal>
-
-            <Reveal delay={0.3}>
-              <PastelCard accent="peach">
-                <p className="font-medium text-ink">{t(a?.acceleratorTitle, lang)}</p>
-                <p className="mt-2 text-sm text-ink/80 leading-relaxed">
-                  {t(a?.accelerator, lang)}
-                </p>
-              </PastelCard>
             </Reveal>
           </div>
-
-          {/* Upcoming / International */}
-          {!!upcoming.length && (
-            <Reveal delay={0.35}>
-              <PastelCard accent="butter">
-                <p className="font-medium text-ink">{t(a?.upcomingTitle, lang)}</p>
-                <ul className="mt-3 space-y-2 text-sm text-ink/80">
-                  {upcoming.map((it, i) => (
-                    <li key={i}>• {t(it, lang)}</li>
-                  ))}
-                </ul>
-              </PastelCard>
-            </Reveal>
-          )}
-
-          {/* What I do + Impact goals in 2-column grid */}
-          <div className="grid gap-4 md:grid-cols-2 items-start">
-            <Reveal delay={0.4}>
-              <PastelCard accent="mint">
-                <p className="font-medium text-ink">{t(a?.whatIDoTitle, lang)}</p>
-                <ul className="mt-3 space-y-2 text-sm text-ink/80">
-                  {whatIDo.map((it, i) => (
-                    <li key={i}>• {t(it, lang)}</li>
-                  ))}
-                </ul>
-              </PastelCard>
-            </Reveal>
-
-            <Reveal delay={0.45}>
-              <PastelCard accent="lilac">
-                <p className="font-medium text-ink">{t(a?.impactGoalsTitle, lang)}</p>
-                <ul className="mt-3 space-y-2 text-sm text-ink/80">
-                  {impactGoals.map((it, i) => (
-                    <li key={i}>• {t(it, lang)}</li>
-                  ))}
-                </ul>
-              </PastelCard>
-            </Reveal>
-          </div>
-        </div>
-      </Container>
-    </Section>
+        </Container>
+      </div>
+    </section>
   );
 }
