@@ -39,29 +39,23 @@ export const portfolio = {
 
   hero: {
     openToWork: {
-      en: "Open to new roles in accessibility, AI & emerging tech",
-      es: "Abierta a nuevos retos en accesibilidad, IA y tecnologías emergentes",
+      en: "Open to new roles in AI & accessibility",
+      es: "Abierta a nuevos retos en IA y accesibilidad",
     },
     hello: { en: "Hi, I’m Nerea", es: "Hola, soy Nerea" },
-    titleStart: { en: "I make technology work for", es: "Hago que la tecnología funcione para" },
-    titleHighlight: { en: "everyone.", es: "todo el mundo." },
+    titleStart: { en: "I build AI that adapts to", es: "Construyo IA que se adapta a" },
+    titleHighlight: { en: "each person.", es: "cada persona." },
     sub: {
-      en: "Telematics Engineer and CEO & co-founder of AIntegra, where I build technology that adapts to each person — whatever their abilities or digital skills. I’ve built multi-agent AI at Ford and help set XR accessibility standards in Europe.",
-      es: "Ingeniera Telemática y CEO y cofundadora de AIntegra, donde creo tecnología que se adapta a cada persona — sean cuales sean sus capacidades o su nivel digital. He construido IA multiagente en Ford y ayudo a definir estándares de accesibilidad XR en Europa.",
+      en: "Telematics Engineer. Multi-agent AI systems at Ford, 100% local AI at AIntegra, and XR accessibility standards in Europe.",
+      es: "Ingeniera Telemática. Sistemas de IA multiagente en Ford, IA 100% local en AIntegra y estándares europeos de accesibilidad XR.",
     },
-    proofLabel: { en: "Recognised by", es: "Reconocida por" },
-    proof: ["Ford", "INCIBE", "Dedalus", "Universitat de València", "VDS+"],
     photo: { src: "/img/hero-nerea.webp", alt: { en: "Nerea Panadero smiling", es: "Nerea Panadero sonriendo" }, width: 720, height: 900 },
-    stickers: {
-      award: { en: "1st Prize · Ford Smart Mobility", es: "1er premio · Ford Smart Mobility" },
-      role: { en: "Speaker · VDS 2026", es: "Ponente · VDS 2026" },
-      now: { en: "Now in Brussels · XR4Europe", es: "Ahora en Bruselas · XR4Europe" },
-    },
+    sticker: { en: "AI · Accessibility · XR", es: "IA · Accesibilidad · XR" },
   },
 
   marquee: {
-    en: ["Digital accessibility", "Multi-agent AI", "Local-first AI", "XR / VR accessibility", "Hardware prototyping", "Inclusive design", "User validation", "Public speaking", "Python · Java · C++"],
-    es: ["Accesibilidad digital", "IA multiagente", "IA en local", "Accesibilidad XR / VR", "Prototipado hardware", "Diseño inclusivo", "Validación con usuarios", "Hablar en público", "Python · Java · C++"],
+    en: ["Multi-agent AI", "Local-first AI", "Digital accessibility", "XR / VR", "Hardware prototyping", "Python · Java · C++"],
+    es: ["IA multiagente", "IA en local", "Accesibilidad digital", "XR / VR", "Prototipado hardware", "Python · Java · C++"],
   },
 
   about: {
@@ -69,8 +63,8 @@ export const portfolio = {
     titleStart: { en: "Engineering with a", es: "Ingeniería con" },
     titleHighlight: { en: "social vocation.", es: "vocación social." },
     bio: {
-      en: "I’m a Telematics Engineer passionate about digital accessibility, artificial intelligence and educational innovation. I co-founded AIntegra to build award-winning technology that adapts to people of every ability — it started with blind users and now embraces every kind of diversity. I’m known for adaptability, entrepreneurial vision and leading multidisciplinary projects.",
-      es: "Soy Ingeniera Telemática apasionada por la accesibilidad digital, la inteligencia artificial y la innovación educativa. Cofundé AIntegra para crear tecnología premiada que se adapta a personas de cualquier capacidad — nació para personas ciegas y hoy abraza cualquier tipo de diversidad. Destaco por mi adaptabilidad, visión emprendedora y liderazgo de proyectos multidisciplinares.",
+      en: "I’m a Telematics Engineer who builds AI with a social purpose: multi-agent systems in enterprise, and assistive technology that adapts to each person — whatever their abilities or digital skills.",
+      es: "Soy Ingeniera Telemática y construyo IA con propósito social: sistemas multiagente en entornos empresariales y tecnología que se adapta a cada persona, sean cuales sean sus capacidades o su nivel digital.",
     },
     quote: {
       en: "Accessibility isn’t a feature I add at the end. It’s where I start.",
@@ -81,21 +75,20 @@ export const portfolio = {
     strengths: [
       {
         color: "mint",
-        kicker: { en: "Builder", es: "Constructora" },
-        title: { en: "I build the real thing", es: "Construyo lo real" },
+        kicker: { en: "AI", es: "IA" },
+        title: { en: "I ship AI, not slides", es: "Hago IA, no diapositivas" },
         body: {
-          en: "Hardware and software, from prototype to validation with users.",
-          es: "Hardware y software, del prototipo a la validación con usuarios.",
+          en: "Multi-agent and multimodal systems in production environments, plus models running fully on-device.",
+          es: "Sistemas multiagente y multimodales en entornos reales, y modelos funcionando entero en el dispositivo.",
         },
-        chips: ["Python", "Multi-agent AI", "BigQuery", "Java", "C++"],
       },
       {
         color: "blush",
         kicker: { en: "Communicator", es: "Comunicadora" },
-        title: { en: "Founder who pitches & wins", es: "Founder que presenta y gana" },
+        title: { en: "I explain it on stage", es: "Lo explico en el escenario" },
         body: {
-          en: "Best Pitch Award 2026. Comfortable on stage, with juries, NGOs and engineers.",
-          es: "Premio al Mejor Pitch 2026. Cómoda en escenarios, con jurados, ONGs e ingenieros.",
+          en: "Equally comfortable with juries, engineers and people testing a prototype for the first time.",
+          es: "Igual de cómoda con jurados, con ingenieros y con quien prueba un prototipo por primera vez.",
         },
       },
       {
@@ -103,32 +96,20 @@ export const portfolio = {
         kicker: { en: "International", es: "Internacional" },
         title: { en: "Valencia ⇄ Brussels", es: "Valencia ⇄ Bruselas" },
         body: {
-          en: "Spanish & Catalan (native), English (B2). Used to European, multidisciplinary teams.",
-          es: "Español y valenciano (nativo), inglés (B2). Acostumbrada a equipos europeos y multidisciplinares.",
+          en: "Used to European, multidisciplinary teams.",
+          es: "Acostumbrada a equipos europeos y multidisciplinares.",
         },
       },
     ],
-    awardsStat: {
-      label: { en: "awards & finalist spots", es: "premios y finales" },
-      body: { en: "Ford · INCIBE · Dedalus · VDS+ · UV", es: "Ford · INCIBE · Dedalus · VDS+ · UV" },
-    },
-    now: {
-      title: { en: "Right now", es: "Ahora mismo" },
-      points: [
-        { en: "Defining accessibility criteria for the XR Ethics Certification at XR4Europe (Brussels).", es: "Definiendo criterios de accesibilidad para la XR Ethics Certification en XR4Europe (Bruselas)." },
-        { en: "Growing AIntegra: CAT and CATY, technology that adapts to every person.", es: "Haciendo crecer AIntegra: CAT y CATY, tecnología que se adapta a cada persona." },
-        { en: "Getting ready to speak at ExpoInnova (15 Oct) and VDS 2026 (21–22 Oct), both in Valencia.", es: "Preparando mis ponencias en ExpoInnova (15 oct) y VDS 2026 (21–22 oct), ambas en Valencia." },
-      ],
-    },
     lookingFor: {
       title: { en: "What I’m looking for", es: "Qué estoy buscando" },
       body: {
-        en: "Roles where accessibility, AI and emerging tech create real impact — ideally in international, multidisciplinary teams.",
-        es: "Puestos donde la accesibilidad, la IA y las tecnologías emergentes generen impacto real — idealmente en equipos internacionales y multidisciplinares.",
+        en: "AI roles with real impact — in international teams where the technology reaches people.",
+        es: "Puestos de IA con impacto real — en equipos internacionales donde la tecnología llegue a las personas.",
       },
       roles: {
-        en: ["Accessibility Engineer", "AI & Innovation", "XR Accessibility", "Emerging Tech / Product"],
-        es: ["Ingeniera de Accesibilidad", "IA e Innovación", "Accesibilidad XR", "Tecnologías emergentes / Producto"],
+        en: ["AI Engineer", "AI agents & automation", "Innovation / R&D", "Accessibility & XR"],
+        es: ["Ingeniera de IA", "Agentes de IA y automatización", "Innovación / I+D", "Accesibilidad y XR"],
       },
     },
   },
@@ -151,9 +132,8 @@ export const portfolio = {
         dates: { en: "Sep 2026 – Dec 2026", es: "Sep 2026 – Dic 2026" },
         current: true,
         bullets: [
-          { en: "Accessibility and inclusive design for XR and VR environments.", es: "Accesibilidad y diseño inclusivo para entornos XR y VR." },
-          { en: "Contributing to European initiatives for responsible, accessible, human-centered immersive technologies.", es: "Contribución a iniciativas europeas por tecnologías inmersivas responsables, accesibles y centradas en las personas." },
-          { en: "Accessibility criteria and guidelines for the XR Ethics Certification.", es: "Criterios y guías de accesibilidad para la XR Ethics Certification." },
+          { en: "Writing the accessibility criteria for the XR Ethics Certification.", es: "Redacto los criterios de accesibilidad de la XR Ethics Certification." },
+          { en: "European working groups on responsible immersive technology.", es: "Grupos de trabajo europeos sobre tecnología inmersiva responsable." },
         ],
         note: {
           en: "Via the EU-funded Erasmus for Young Entrepreneurs programme, coordinated in Spain by AJEV.",
@@ -169,10 +149,8 @@ export const portfolio = {
         dates: { en: "2022 – Present", es: "2022 – Actualidad" },
         current: true,
         bullets: [
-          { en: "Accessible technology born for blind people — now designed for every kind of diversity and digital skill level.", es: "Tecnología accesible nacida para personas ciegas — hoy pensada para cualquier diversidad y nivel de conocimiento tecnológico." },
-          { en: "Creation and validation of CAT, a gesture-navigation device, and CATY, an AI assistant that runs 100% locally.", es: "Creación y validación de CAT, un dispositivo de navegación por gestos, y CATY, un asistente de IA que funciona 100% en local." },
-          { en: "Coordination with NGOs, institutions and users for prototype validation.", es: "Coordinación con ONGs, instituciones y usuarios para validar prototipos." },
-          { en: "Project management, strategic partnerships and social innovation programmes.", es: "Gestión de proyectos, alianzas estratégicas y programas de innovación social." },
+          { en: "Leading product and tech: hardware, local AI and the team behind it.", es: "Dirijo producto y tecnología: hardware, IA en local y el equipo que hay detrás." },
+          { en: "Validation with NGOs, institutions and users, plus partnerships and funding.", es: "Validación con ONGs, instituciones y usuarios, además de alianzas y financiación." },
         ],
         tags: ["Hardware", "AI", "Accessibility"],
       },
@@ -183,9 +161,8 @@ export const portfolio = {
         place: { en: "Valencia, Spain", es: "Valencia, España" },
         dates: { en: "Feb 2026 – Jul 2026", es: "Feb 2026 – Jul 2026" },
         bullets: [
-          { en: "Innovation Department internship focused on AI agents and automation.", es: "Prácticas en el Departamento de Innovación centradas en agentes de IA y automatización." },
-          { en: "Fordy: multi-agent, multimodal AI system connecting Microsoft Teams with BigQuery — also my Bachelor’s thesis.", es: "Fordy: sistema de IA multiagente y multimodal que conecta Microsoft Teams con BigQuery — también mi TFG." },
-          { en: "Pharos: centralised platform for documents and guides with organisational accounts.", es: "Pharos: plataforma centralizada de documentos y guías con cuentas organizacionales." },
+          { en: "Two AI projects in the Innovation Department: Fordy and Pharos (see Projects).", es: "Dos proyectos de IA en el Departamento de Innovación: Fordy y Pharos (ver Proyectos)." },
+          { en: "Enterprise constraints: internal data, organisational accounts, confidentiality.", es: "Con restricciones de empresa: datos internos, cuentas organizacionales, confidencialidad." },
         ],
         tags: ["Multi-agent AI", "Multimodal", "BigQuery", "Innovation"],
         photos: [
@@ -201,8 +178,7 @@ export const portfolio = {
         place: { en: "Valencia, Spain", es: "Valencia, España" },
         dates: { en: "2020 – 2024", es: "2020 – 2024" },
         bullets: [
-          { en: "Programming, maths and physics for students aged 7 to 23.", es: "Programación, matemáticas y física para alumnos de 7 a 23 años." },
-          { en: "Explaining complex concepts clearly, adapted to each level.", es: "Explicar conceptos complejos con claridad, adaptados a cada nivel." },
+          { en: "Programming, maths and physics for students aged 7 to 23 — where I learned to explain hard things simply.", es: "Programación, matemáticas y física para alumnos de 7 a 23 años — donde aprendí a explicar lo difícil de forma sencilla." },
         ],
         tags: ["Teaching", "Communication"],
       },
@@ -287,12 +263,6 @@ export const portfolio = {
         es: "CEO y cofundadora: desarrollo de producto y tecnología, validación con ONGs y usuarios, alianzas y pitching.",
       },
     },
-    recognition: [
-      { en: "🏆 1st Prize · Ford Smart Mobility 2026", es: "🏆 1er premio · Ford Smart Mobility 2026" },
-      { en: "🎤 Best Pitch · Startup Valencia × INCIBE", es: "🎤 Mejor Pitch · Startup Valencia × INCIBE" },
-      { en: "🚀 IAtecUV accelerator", es: "🚀 Aceleradora IAtecUV" },
-      { en: "⭐ ETSE-UV Preincubator winner", es: "⭐ Ganadores Preincubadora ETSE-UV" },
-    ],
     websiteLabel: { en: "Visit aintegralimited.com", es: "Visitar aintegralimited.com" },
     websiteUrl: "https://www.aintegralimited.com",
     photos: [
@@ -333,18 +303,17 @@ export const portfolio = {
           es: "En una gran organización, el día a día ocurre en Microsoft Teams y los datos viven en BigQuery. Unirlos con IA tiene que funcionar dentro de las reglas de un entorno empresarial.",
         },
         solution: {
-          en: "Fordy: a multi-agent, multimodal system that connects Microsoft Teams with BigQuery, built for Ford’s organisational environment. It is also my Bachelor’s thesis.",
-          es: "Fordy: un sistema multiagente y multimodal que conecta Microsoft Teams con BigQuery, construido para el entorno organizacional de Ford. Es también mi Trabajo de Fin de Grado.",
+          en: "Several specialised agents coordinate to answer in natural language from Teams, query the data and come back with the result — built inside Ford’s own environment.",
+          es: "Varios agentes especializados se coordinan para responder en lenguaje natural desde Teams, consultar los datos y devolver el resultado — dentro del propio entorno de Ford.",
         },
         role: [
           { en: "Designed the multi-agent architecture", es: "Diseñé la arquitectura multiagente" },
           { en: "Built multimodal interaction", es: "Construí la interacción multimodal" },
           { en: "Integrated Microsoft Teams with BigQuery", es: "Integré Microsoft Teams con BigQuery" },
-          { en: "Developed it as my Bachelor’s thesis", es: "Lo desarrollé como mi TFG" },
         ],
         impact: [
-          { en: "AI agents running in a real enterprise environment", es: "Agentes de IA funcionando en un entorno empresarial real" },
-          { en: "Academic + industry validation (TFG with Ford)", es: "Validación académica e industrial (TFG con Ford)" },
+          { en: "AI agents running inside a real company", es: "Agentes de IA funcionando dentro de una empresa real" },
+          { en: "Graded as my Bachelor’s thesis", es: "Evaluado como Trabajo de Fin de Grado" },
         ],
         tags: ["Multi-agent AI", "Multimodal", "BigQuery", "Microsoft Teams"],
         gallery: [],
@@ -366,16 +335,15 @@ export const portfolio = {
           es: "Los documentos y guías que ayudan a la gente dentro de una gran empresa necesitan un sitio central y organizado.",
         },
         solution: {
-          en: "Pharos: a platform where teams upload documents and guides in one centralised place, with organisational accounts.",
-          es: "Pharos: una plataforma donde los equipos suben documentos y guías en un único sitio centralizado, con cuentas organizacionales.",
+          en: "One place to upload, organise and find them, with accounts tied to each team so the right people see the right material.",
+          es: "Un único sitio donde subirlos, organizarlos y encontrarlos, con cuentas por equipo para que cada persona vea lo que le toca.",
         },
         role: [
-          { en: "Worked on the platform during my Ford internship", es: "Trabajé en la plataforma durante mis prácticas en Ford" },
-          { en: "Centralised document & guide management", es: "Gestión centralizada de documentos y guías" },
-          { en: "Organisational accounts", es: "Cuentas organizacionales" },
+          { en: "Platform design and development", es: "Diseño y desarrollo de la plataforma" },
+          { en: "Organisational accounts and access", es: "Cuentas organizacionales y accesos" },
         ],
         impact: [
-          { en: "One place for internal documents and guides", es: "Un único lugar para documentos y guías internos" },
+          { en: "Less time lost looking for internal material", es: "Menos tiempo buscando material interno" },
         ],
         tags: ["Platform", "Enterprise", "Knowledge"],
         gallery: [],
@@ -396,8 +364,8 @@ export const portfolio = {
           es: "Las personas ciegas o con baja visión están especialmente expuestas al introducir datos sensibles, y la mayoría de controles de seguridad — como los CAPTCHA visuales — no son accesibles.",
         },
         solution: {
-          en: "We built CATY’s cybersecurity: it runs fully locally, we wrote a handbook for a gesture-based CAPTCHA so verification is accessible, and added safe modes for specific needs — like a black screen curtain while blind users type sensitive information.",
-          es: "Desarrollamos la ciberseguridad de CATY: funciona totalmente en local, creamos un handbook de un CAPTCHA por gestos para que la verificación sea accesible y añadimos modos seguros para necesidades concretas — como una cortina negra en pantalla mientras las personas ciegas introducen información sensible.",
+          en: "Keeping the AI on the device removes the biggest leak: data never travels. On top of that, a handbook for a gesture-based CAPTCHA, and safe modes such as a black screen curtain while someone types sensitive information out loud.",
+          es: "Mantener la IA en el dispositivo elimina la mayor fuga: los datos no viajan. Encima, un handbook de un CAPTCHA por gestos y modos seguros, como una cortina negra en pantalla mientras alguien dicta información sensible.",
         },
         role: [
           { en: "Local-first: no data leaves the device", es: "Local primero: ningún dato sale del dispositivo" },
@@ -406,7 +374,6 @@ export const portfolio = {
           { en: "Final pitch to the jury", es: "Pitch final ante el jurado" },
         ],
         impact: [
-          { en: "2nd Prize & Best Pitch Award (2026)", es: "2º premio y Premio al Mejor Pitch (2026)" },
           { en: "Security that is accessible by design", es: "Seguridad accesible desde el diseño" },
         ],
         tags: ["Cybersecurity", "Local AI", "Accessibility"],
@@ -436,8 +403,8 @@ export const portfolio = {
           es: "Algunos medicamentos no deberían mezclarse con ciertos alimentos, pero esa información rara vez llega a la alimentación del día a día.",
         },
         solution: {
-          en: "A project that joins CIMA — the Spanish medicines database (AEMPS) — with the analysis of nutritional guidelines, to warn about using certain medicines together with specific foods.",
-          es: "Un proyecto que une CIMA — la base de datos de medicamentos de la AEMPS — con el análisis de pautas nutricionales, para advertir del uso de ciertos medicamentos mezclados con determinadas comidas.",
+          en: "Cross-checking the leaflets in CIMA (the Spanish medicines database) against nutritional guidelines, so a warning appears before the risky combination ends up on the plate.",
+          es: "Cruzar los prospectos de CIMA (la base de datos española de medicamentos) con pautas nutricionales, para que el aviso aparezca antes de que la combinación de riesgo llegue al plato.",
         },
         role: [
           { en: "Connected the CIMA medicines database", es: "Conecté la base de datos de medicamentos CIMA" },
@@ -466,8 +433,8 @@ export const portfolio = {
           es: "Los sistemas sanitarios en España dependen de flujos de datos fragmentados y manuales que generan ineficiencias, duplicidades y errores.",
         },
         solution: {
-          en: "An automation platform to streamline and centralize healthcare database operations, improving data integrity and clinical workflow support — plus a mobile app for patients.",
-          es: "Una plataforma para centralizar y optimizar operaciones de bases de datos sanitarias, mejorando la integridad de los datos y los flujos clínicos — además de una app móvil para pacientes.",
+          en: "Automating the repetitive database operations so clinical staff stop copying data by hand — plus a mobile app so patients see their own information.",
+          es: "Automatizar las operaciones repetitivas de base de datos para que el personal clínico deje de copiar datos a mano — y una app móvil para que los pacientes vean su información.",
         },
         role: [
           { en: "Conceptualized the solution architecture", es: "Conceptualicé la arquitectura de la solución" },
@@ -505,8 +472,8 @@ export const portfolio = {
           es: "Muchos editores colaborativos priorizan la usabilidad pero no la seguridad a nivel de arquitectura, un riesgo en entornos sensibles.",
         },
         solution: {
-          en: "A secure real-time editor with a multi-key security model and an AI assistant for summaries, sensitive-info detection and redaction.",
-          es: "Un editor seguro en tiempo real con modelo de seguridad multi-clave y un asistente IA para resúmenes, detección de información sensible y redacción.",
+          en: "Each document is protected by several keys, so no single stolen credential opens it — and an AI assistant summarises, flags sensitive data and redacts it.",
+          es: "Cada documento se protege con varias claves, así que una credencial robada no basta para abrirlo — y un asistente de IA resume, detecta datos sensibles y los tacha.",
         },
         role: [
           { en: "Co-designed the product architecture", es: "Co-diseñé la arquitectura del producto" },
@@ -561,20 +528,16 @@ export const portfolio = {
     ],
     // newest first
     items: [
-      { year: "2026", date: { en: "Oct 2026", es: "Oct 2026" }, type: "milestone", title: { en: "Speaker — VDS 2026, Valencia", es: "Ponente — VDS 2026, Valencia" }, text: { en: "Speaking as CEO & Co-Founder of AIntegra at VDS (21–22 Oct 2026, City of Arts and Sciences).", es: "Ponente como CEO y cofundadora de AIntegra en VDS (21–22 oct 2026, Ciudad de las Artes y las Ciencias)." } },
-      { year: "2026", date: { en: "15 Oct 2026", es: "15 oct 2026" }, type: "milestone", title: { en: "Speaker — ExpoInnova 2026", es: "Ponente — ExpoInnova 2026" }, text: { en: "Talk at ExpoInnova, Parc Científic de la Universitat de València.", es: "Ponencia en ExpoInnova, Parc Científic de la Universitat de València." } },
-      { year: "2026", date: { en: "Sep 2026", es: "Sep 2026" }, type: "milestone", title: { en: "Erasmus for Young Entrepreneurs — XR4Europe, Brussels", es: "Erasmus for Young Entrepreneurs — XR4Europe, Bruselas" }, text: { en: "European mobility working on XR accessibility (EU-funded, coordinated in Spain by AJEV).", es: "Movilidad europea trabajando en accesibilidad XR (financiada por la UE, coordinada en España por AJEV)." } },
-      { year: "2026", date: { en: "Jul 2026", es: "Jul 2026" }, type: "milestone", title: { en: "Foro Plaza — Valencia Plaza", es: "Foro Plaza — Valencia Plaza" }, text: { en: "Took part in Foro Plaza, organised by the newspaper Valencia Plaza.", es: "Participación en Foro Plaza, organizado por el periódico Valencia Plaza." } },
-      { year: "2026", date: { en: "May 2026", es: "May 2026" }, type: "award", title: { en: "1st Prize — Ford Smart Mobility Challenge", es: "1er premio — Ford Smart Mobility Challenge" }, text: { en: "With AIntegra, by Ford Philanthropy and the University of Valencia (€12,500).", es: "Con AIntegra, de Ford Philanthropy y la Universitat de València (12.500 €)." } },
-      { year: "2026", date: { en: "Apr 2026", es: "Abr 2026" }, type: "award", title: { en: "2nd Prize & Best Pitch — Cybersecurity Startup Program", es: "2º premio y Mejor Pitch — Cybersecurity Startup Program" }, text: { en: "By Startup Valencia and INCIBE, with CATY’s cybersecurity at the Demo Day.", es: "De Startup Valencia e INCIBE, con la ciberseguridad de CATY en el Demo Day." } },
-      { year: "2026", date: { en: "Feb 2026", es: "Feb 2026" }, type: "program", title: { en: "SMILE Incubator — Sweden", es: "Incubadora SMILE — Suecia" }, text: { en: "Incubation programme at SMILE, Sweden.", es: "Programa de incubación en SMILE, Suecia." } },
-      { year: "2026", date: { en: "Jan 2026", es: "Ene 2026" }, type: "program", title: { en: "Selected — IAtecUV accelerator", es: "Seleccionados — Aceleradora IAtecUV" }, text: { en: "University of Valencia Science Park.", es: "Parc Científic de la Universitat de València." } },
-      { year: "2026", date: { en: "Jan 2026", es: "Ene 2026" }, type: "program", title: { en: "Selected — Cybersecurity Startup Program", es: "Seleccionados — Cybersecurity Startup Program" }, text: { en: "Startup Valencia × INCIBE.", es: "Startup Valencia × INCIBE." } },
-      { year: "2026", date: { en: "Jan 2026", es: "Ene 2026" }, type: "program", title: { en: "Selected — Erasmus+ Health2Innovation", es: "Seleccionados — Erasmus+ Health2Innovation" }, text: { en: "Project: medicine–food interaction alerts using the CIMA database.", es: "Proyecto: alertas de interacción medicamento–alimento con la base de datos CIMA." } },
-      { year: "2025", date: { en: "Dec 2025", es: "Dic 2025" }, type: "award", title: { en: "1st Prize — Dedalus Datathon", es: "1er premio — Dedalus Datathon" }, text: { en: "With AIntegra Health: automation for healthcare data.", es: "Con AIntegra Health: automatización de datos sanitarios." } },
-      { year: "2025", date: { en: "Nov 2025", es: "Nov 2025" }, type: "award", title: { en: "Finalist — VDS+ The Challenge", es: "Finalista — VDS+ The Challenge" }, text: { en: "With CypherDoc: secure collaborative editor.", es: "Con CypherDoc: editor colaborativo seguro." } },
-      { year: "2025", date: { en: "Jul 2025", es: "Jul 2025" }, type: "award", title: { en: "Winner — ETSE-UV Preincubator Award", es: "Ganadores — Premio Preincubadora ETSE-UV" }, text: { en: "University tech entrepreneurship, with AIntegra.", es: "Emprendimiento tecnológico universitario, con AIntegra." } },
-      { year: "2024", date: { en: "2024", es: "2024" }, type: "award", title: { en: "3rd Place — MOTIVEM Fest", es: "3er puesto — MOTIVEM Fest" }, text: { en: "Universitat de València, with AIntegra.", es: "Universitat de València, con AIntegra." } },
+      { year: "2026", date: { en: "Sep 2026", es: "Sep 2026" }, type: "milestone", title: { en: "Erasmus for Young Entrepreneurs — XR4Europe, Brussels", es: "Erasmus for Young Entrepreneurs — XR4Europe, Bruselas" }, text: { en: "EU-funded mobility, coordinated in Spain by AJEV.", es: "Movilidad europea financiada por la UE, coordinada en España por AJEV." } },
+      { year: "2026", date: { en: "May 2026", es: "May 2026" }, type: "award", title: { en: "1st Prize — Ford Smart Mobility Challenge", es: "1er premio — Ford Smart Mobility Challenge" }, text: { en: "Ford Philanthropy × Universitat de València · €12,500.", es: "Ford Philanthropy × Universitat de València · 12.500 €." } },
+      { year: "2026", date: { en: "Apr 2026", es: "Abr 2026" }, type: "award", title: { en: "2nd Prize & Best Pitch — Cybersecurity Startup Program", es: "2º premio y Mejor Pitch — Cybersecurity Startup Program" }, text: { en: "Startup Valencia × INCIBE.", es: "Startup Valencia × INCIBE." } },
+      { year: "2026", date: { en: "Feb 2026", es: "Feb 2026" }, type: "program", title: { en: "SMILE Incubator — Sweden", es: "Incubadora SMILE — Suecia" }, text: { en: "Sweden.", es: "Suecia." } },
+      { year: "2026", date: { en: "Jan 2026", es: "Ene 2026" }, type: "program", title: { en: "Selected — IAtecUV accelerator", es: "Seleccionados — Aceleradora IAtecUV" }, text: { en: "UV Science Park.", es: "Parc Científic UV." } },
+      { year: "2026", date: { en: "Jan 2026", es: "Ene 2026" }, type: "program", title: { en: "Selected — Erasmus+ Health2Innovation", es: "Seleccionados — Erasmus+ Health2Innovation" }, text: { en: "International innovation in health.", es: "Innovación internacional en salud." } },
+      { year: "2025", date: { en: "Dec 2025", es: "Dic 2025" }, type: "award", title: { en: "1st Prize — Dedalus Datathon", es: "1er premio — Dedalus Datathon" }, text: { en: "With AIntegra Health.", es: "Con AIntegra Health." } },
+      { year: "2025", date: { en: "Nov 2025", es: "Nov 2025" }, type: "award", title: { en: "Finalist — VDS+ The Challenge", es: "Finalista — VDS+ The Challenge" }, text: { en: "With CypherDoc.", es: "Con CypherDoc." } },
+      { year: "2025", date: { en: "Jul 2025", es: "Jul 2025" }, type: "award", title: { en: "Winner — ETSE-UV Preincubator Award", es: "Ganadores — Premio Preincubadora ETSE-UV" }, text: { en: "University tech entrepreneurship.", es: "Emprendimiento tecnológico universitario." } },
+      { year: "2024", date: { en: "2024", es: "2024" }, type: "award", title: { en: "3rd Place — MOTIVEM Fest", es: "3er puesto — MOTIVEM Fest" }, text: { en: "Universitat de València.", es: "Universitat de València." } },
     ],
   },
 
@@ -629,20 +592,6 @@ export const portfolio = {
         },
         image: { src: "/img/foro-plaza.webp", width: 1100, height: 732, alt: { en: "Nerea with the Foro Plaza participants at Valencia Plaza", es: "Nerea con los participantes de Foro Plaza en Valencia Plaza" } },
       },
-      {
-        id: "demoday",
-        endDate: "2026-04-10",
-        color: "blush",
-        date: { en: "Apr 2026", es: "Abr 2026" },
-        title: { en: "Demo Day · Best Pitch", es: "Demo Day · Mejor Pitch" },
-        place: { en: "Cybersecurity Startup Program · Startup Valencia × INCIBE", es: "Cybersecurity Startup Program · Startup Valencia × INCIBE" },
-        text: {
-          en: "Pitched CATY’s cybersecurity and won the Best Pitch Award (plus 2nd Prize).",
-          es: "Presenté la ciberseguridad de CATY y ganamos el Premio al Mejor Pitch (y el 2º premio).",
-        },
-        link: "https://www.instagram.com/p/DW8PLvFghPV/",
-        image: { src: "/img/cyber-demoday-duo.webp", width: 720, height: 960, alt: { en: "Nerea and her co-founder at the Demo Day", es: "Nerea y su cofundador en el Demo Day" } },
-      },
     ],
   },
 
@@ -682,8 +631,8 @@ export const portfolio = {
     titleHighlight: { en: "accessible", es: "accesible" },
     titleEnd: { en: "together.", es: "juntos." },
     lead: {
-      en: "Hiring for accessibility, AI or emerging tech? Organising a talk? Want to try CAT or CATY? My inbox is open.",
-      es: "¿Buscas perfil en accesibilidad, IA o tecnologías emergentes? ¿Organizas una charla? ¿Quieres probar CAT o CATY? Escríbeme.",
+      en: "Hiring, collaborating or curious about the work? My inbox is open.",
+      es: "¿Contratas, colaboras o te ha picado la curiosidad? Escríbeme.",
     },
     location: { en: "Valencia, Spain · currently in Brussels", es: "Valencia, España · ahora en Bruselas" },
     copyEmail: { en: "Copy email", es: "Copiar email" },

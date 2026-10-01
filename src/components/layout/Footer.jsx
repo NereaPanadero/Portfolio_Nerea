@@ -20,7 +20,7 @@ export default function Footer() {
             <NPLogo className="h-14 w-14" />
             <div>
               <p className="text-xl font-extrabold">Nerea Panadero Alfonso</p>
-              <Braille label={t(portfolio.ui.brailleTitle, lang)} className="mt-2 h-4 w-auto text-butter" dot={4} />
+              <span aria-hidden="true"><Braille className="mt-2 h-4 w-auto text-butter" dot={4} /></span>
             </div>
           </div>
 

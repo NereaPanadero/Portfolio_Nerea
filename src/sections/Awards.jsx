@@ -38,7 +38,7 @@ function Polaroids({ photos, lang, hint }) {
                 className="absolute inset-0 rounded-md border-2 border-ink bg-surface p-3 pb-14 transition-transform duration-500"
                 style={{ transform: `rotate(${isTop ? "-1.5deg" : ROT[idx % ROT.length]})`, boxShadow: "5px 5px 0 rgb(var(--shadow))" }}
               >
-                <Img src={ph.src} alt={isTop ? t(ph.alt, lang) : ""} className="h-full w-full rounded-sm object-cover" />
+                <Img src={ph.src} alt="" className="h-full w-full rounded-sm object-cover" />
                 <figcaption className="serif absolute inset-x-0 bottom-3 text-center text-2xl text-ink">{t(ph.caption, lang)}</figcaption>
               </figure>
             );

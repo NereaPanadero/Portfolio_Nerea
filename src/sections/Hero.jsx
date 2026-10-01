@@ -64,14 +64,6 @@ export default function Hero() {
               </button>
             </div>
 
-            <div style={{ "--d": "0.2s" }} className="hero-rise mt-10">
-              <p className="text-xs font-extrabold uppercase tracking-[0.18em] text-ink/60">{t(h.proofLabel, lang)}</p>
-              <ul className="mt-3 flex flex-wrap gap-x-6 gap-y-2 text-lg font-extrabold tracking-tight text-ink/80">
-                {h.proof.map((name) => (
-                  <li key={name}>{name}</li>
-                ))}
-              </ul>
-            </div>
           </div>
 
           {/* Photo collage */}
@@ -88,19 +80,13 @@ export default function Hero() {
               />
             </div>
 
-            <p className="sticker absolute -left-4 top-[12%] animate-floaty !bg-butter sm:-left-12" style={{ "--r": "-7deg" }}>
-              <span aria-hidden="true">🏆</span> {t(h.stickers.award, lang)}
-            </p>
-            <p className="sticker absolute -right-2 top-[46%] animate-floaty !bg-sky [animation-delay:1.2s] sm:-right-10" style={{ "--r": "5deg" }}>
-              <span aria-hidden="true">🎤</span> {t(h.stickers.role, lang)}
+            <p className="sticker absolute -right-2 top-[14%] animate-floaty !bg-butter sm:-right-10" style={{ "--r": "5deg" }}>
+              <span aria-hidden="true">✦</span> {t(h.sticker, lang)}
             </p>
             <div className="sticker absolute -bottom-5 left-4 !gap-3 !bg-surface !py-2 sm:left-8" style={{ transform: "rotate(-3deg)" }}>
               <Braille label={t(ui.brailleTitle, lang)} className="h-5 w-auto text-ink" dot={4.5} />
               <span className="text-xs font-bold text-ink/70">← {lang === "en" ? "my name in Braille" : "mi nombre en braille"}</span>
             </div>
-            <p className="sticker absolute -right-3 bottom-[14%] !bg-mint text-xs sm:-right-6" style={{ transform: "rotate(-4deg)" }}>
-              <span aria-hidden="true">📍</span> {t(h.stickers.now, lang)}
-            </p>
           </div>
         </div>
       </Container>

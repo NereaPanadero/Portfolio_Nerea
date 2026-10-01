@@ -61,14 +61,7 @@ export default function AIntegra() {
               </Reveal>
 
               <Reveal delay={0.15}>
-                <ul className="mt-9 flex flex-wrap gap-2">
-                  {a.recognition.map((r, i) => (
-                    <li key={i} className="rounded-full border-2 border-paper/30 px-3.5 py-1.5 text-sm font-bold text-paper">
-                      {t(r, lang)}
-                    </li>
-                  ))}
-                </ul>
-                <a href={a.websiteUrl} target="_blank" rel="noopener noreferrer" className="btn btn-sun mt-8 !border-paper">
+                                <a href={a.websiteUrl} target="_blank" rel="noopener noreferrer" className="btn btn-sun mt-8 !border-paper">
                   {t(a.websiteLabel, lang)} <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
                 </a>
               </Reveal>

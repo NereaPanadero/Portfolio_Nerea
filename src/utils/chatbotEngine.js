@@ -100,8 +100,8 @@ const INTENTS = [
     keywords: ["quien es", "quien eres", "who is", "who are you", "about her", "sobre ella", "sobre nerea", "presentate", "introduce", "resumen", "summary", "perfil", "profile", "nerea", "cuentame sobre ti", "tell me about yourself", "tell me about you"],
     answer: () => ({
       text: L(
-        "**Nerea Panadero Alfonso** is a Telematics Engineer and CEO & co-founder of **AIntegra**, where she builds technology that adapts to each person — AIntegra was born for blind people and now designs for every kind of diversity and digital skill level.\n\nShe’s currently an **XR Accessibility Specialist at XR4Europe** (Brussels), was an **Innovation & AI Intern at Ford** (where she built Fordy, a multi-agent AI system, and Pharos), and has collected **6 awards & finalist spots** — including 1st Prize at the Ford Smart Mobility Challenge.",
-        "**Nerea Panadero Alfonso** es Ingeniera Telemática y CEO y cofundadora de **AIntegra**, donde crea tecnología que se adapta a cada persona — AIntegra nació para las personas ciegas y hoy diseña para cualquier diversidad y nivel de conocimiento tecnológico.\n\nAhora es **XR Accessibility Specialist en XR4Europe** (Bruselas), fue **becaria de Innovación e IA en Ford** (donde creó Fordy, un sistema de IA multiagente, y Pharos) y suma **6 premios y finales** — entre ellos el 1er premio del Ford Smart Mobility Challenge."
+        "**Nerea Panadero Alfonso** — Telematics Engineer, CEO & co-founder of **AIntegra**.\n\n• **AI:** multi-agent and multimodal systems at Ford (Fordy, Pharos), plus CATY, an assistant running 100% on-device.\n• **Accessibility:** XR Accessibility Specialist at XR4Europe (Brussels) and assistive hardware at AIntegra.\n• **Track record:** 6 awards & finalist spots.",
+        "**Nerea Panadero Alfonso** — Ingeniera Telemática, CEO y cofundadora de **AIntegra**.\n\n• **IA:** sistemas multiagente y multimodales en Ford (Fordy, Pharos) y CATY, un asistente que funciona 100% en el dispositivo.\n• **Accesibilidad:** XR Accessibility Specialist en XR4Europe (Bruselas) y hardware asistivo en AIntegra.\n• **Trayectoria:** 6 premios y finales.",
       ),
       actions: ["about", "cv"],
       suggestions: ["whyHire", "fordy", "vds"],
@@ -310,8 +310,8 @@ const INTENTS = [
     keywords: ["contratar", "contratarla", "hire", "hire her", "hiring", "por que", "why", "strengths", "fortalezas", "puntos fuertes", "aporta", "bring", "value", "valor", "diferencia", "destaca", "stand out", "best at", "good fit", "encaja"],
     answer: () => ({
       text: L(
-        "Why Nerea? ✨\n• **Builds real things** — hardware + software, from prototype to validation with users.\n• **Accessibility is her native language** — not a checklist, the starting point.\n• **Proven under pressure** — 6 awards & finals, incl. Best Pitch 2026, and speaker at ExpoInnova & VDS 2026.\n• **Builds AI for real** — Fordy, a multi-agent & multimodal system at Ford (her thesis), and CATY, a 100% local assistant.\n• **International & multidisciplinary** — XR4Europe in Brussels, NGOs, juries, engineers.",
-        "¿Por qué Nerea? ✨\n• **Construye cosas reales** — hardware + software, del prototipo a la validación con usuarios.\n• **La accesibilidad es su idioma nativo** — no un checklist, el punto de partida.\n• **Probada bajo presión** — 6 premios y finales, incluido Mejor Pitch 2026, y ponente en ExpoInnova y VDS 2026.\n• **Construye IA de verdad** — Fordy, sistema multiagente y multimodal en Ford (su TFG), y CATY, un asistente 100% local.\n• **Internacional y multidisciplinar** — XR4Europe en Bruselas, ONGs, jurados, ingenieros."
+        "Why Nerea? ✨\n• **AI that ships** — Fordy (multi-agent + multimodal, Teams × BigQuery at Ford) and CATY, running 100% on-device.\n• **Accessibility by default** — the starting point, not a checklist.\n• **Hardware + software** — from prototype to validation with real users.\n• **Proven under pressure** — 6 awards & finals, and speaker at ExpoInnova & VDS 2026.",
+        "¿Por qué Nerea? ✨\n• **IA que llega a producción** — Fordy (multiagente y multimodal, Teams × BigQuery en Ford) y CATY, funcionando 100% en el dispositivo.\n• **Accesibilidad por defecto** — el punto de partida, no un checklist.\n• **Hardware y software** — del prototipo a la validación con usuarios reales.\n• **Probada bajo presión** — 6 premios y finales, y ponente en ExpoInnova y VDS 2026."
       ),
       actions: ["contact", "cv"],
       suggestions: ["lookingFor", "awards"],
@@ -470,7 +470,7 @@ export function suggestionLabel(id, lang) {
 }
 
 export function starterSuggestions() {
-  return ["about", "whyHire", "lookingFor", "fordy", "caty", "a11ySite"];
+  return ["about", "fordy", "whyHire", "lookingFor", "caty", "a11ySite"];
 }
 
 export function generateResponse(message, { lang: uiLang = "en", lastIntent = null } = {}) {
